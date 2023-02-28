@@ -37,12 +37,14 @@ class Logger:
         this function is to log stuff during the entire program 
         """
         while True:
-            leftSide, rightSide, frontSide, lightReflected = self.sensorFunction()
+            # leftSide, rightSide, frontSide, lightReflected = self.sensorFunction()
+            leftSide, rightSide, frontSide, lightReflected = (0, 0, 0, 0)
             leftWheelAngle = self.leftMotor.angle()
             rightWheelAngle = self.rightMotor.angle()
             # thirdMotorAngle = self.thirdMotor.angle()
             _, robotSpeed, _, _ = self.motor.state()
-            obstacleDetected = self.obstacleDetectFunc()
+            # obstacleDetected = self.obstacleDetectFunc()
+            obstacleDetected = 0
             self.data.log(leftSide,
                         rightSide,
                         frontSide,
